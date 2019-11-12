@@ -7,11 +7,20 @@ public class SneakerTest {
     Sneaker testSneaker = new Sneaker();
 
     @Test
-    public void setgetTestName(){
+    public void testSetGetName() {
         String expected = "oleg";
 
-        testSneaker.setName (expected);
-        Assertions.assertEquals(expected,testSneaker.getName());
+        testSneaker.setName(expected);
+        Assertions.assertEquals(expected, testSneaker.getName());
+
+    }
+
+    @Test
+    public void testSetGetBrand() {
+        String expected = "valentin";
+
+        testSneaker.setBrand(expected);
+        Assertions.assertEquals(expected, testSneaker.getBrand());
 
     }
 }

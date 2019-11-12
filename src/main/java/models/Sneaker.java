@@ -14,8 +14,16 @@ public class Sneaker {
         this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
 
