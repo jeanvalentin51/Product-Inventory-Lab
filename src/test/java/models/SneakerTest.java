@@ -25,8 +25,32 @@ public class SneakerTest {
     }
 
     @Test
+    public void testSetGetSize(){
+        float expected = 23L;
+
+        testSneaker.setSize(expected);
+        Assertions.assertEquals(expected,testSneaker.getSize());
+    }
+
+    @Test
+    public void testSetGetQty(){
+        int expected = 32;
+
+        testSneaker.setQty(expected);
+        Assertions.assertEquals(expected,testSneaker.getQty());
+    }
+
+    @Test
+    public void testSetGetPrice(){
+        float expected = 120L;
+
+        testSneaker.setPrice(expected);
+        Assertions.assertEquals(expected,testSneaker.getPrice());
+    }
+
+    @Test
     public void testSetGetSport(){
-        String expected = "soccer";
+        String expected = "Soccer";
 
         testSneaker.setSport(expected);
         Assertions.assertEquals(expected,testSneaker.getSport());
