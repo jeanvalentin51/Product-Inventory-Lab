@@ -23,4 +23,12 @@ public class SneakerTest {
         Assertions.assertEquals(expected, testSneaker.getBrand());
 
     }
+
+    @Test
+    public void testSetGetSport(){
+        String expected = "soccer";
+
+        testSneaker.setSport(expected);
+        Assertions.assertEquals(expected,testSneaker.getSport());
+    }
 }

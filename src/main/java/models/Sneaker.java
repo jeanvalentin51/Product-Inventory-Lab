@@ -19,12 +19,18 @@ public class Sneaker {
     }
 
     public String getBrand() {
-        return brand;
+        return this.brand;
     }
 
     public void setBrand(String brand) {
         this.brand = brand;
     }
 
+    public void setSport(String sport){
+        this.sport = sport;
+    }
 
+    public String getSport(){
+        return this.sport;
+    }
 }
