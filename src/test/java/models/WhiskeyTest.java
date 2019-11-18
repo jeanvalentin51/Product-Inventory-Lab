@@ -6,7 +6,10 @@ import org.junit.jupiter.api.Test;
 
 public class WhiskeyTest {
 
-    Whiskey testWhiskey = new Whiskey();
+    private String expectedBrand = "Johnny";
+    private int expectedId = 1;
+    private int expectedQty = 2;
+    Whiskey testWhiskey = new Whiskey(expectedBrand,expectedId,expectedQty);
 
     @Test
     public void testSetGetBrand() {
@@ -31,5 +34,14 @@ public class WhiskeyTest {
 
         testWhiskey.setId(expected);
         Assertions.assertEquals(expected,testWhiskey.getId());
+    }
+
+    @Test
+    public void testConstructor(){
+        Whiskey newTest = new Whiskey(expectedBrand,expectedId,expectedQty);
+
+        Assertions.assertEquals(expectedBrand,testWhiskey.getBrand());
+        Assertions.assertEquals(expectedId,testWhiskey.getId());
+        Assertions.assertEquals(expectedQty,testWhiskey.getQty());
     }
 }
