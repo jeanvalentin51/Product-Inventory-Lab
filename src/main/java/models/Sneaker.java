@@ -10,6 +10,16 @@ public class Sneaker {
     private int qty;
     private float price;
 
+    public Sneaker(int id, String name, String brand, String sport, float size, int quantity, float price){
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.sport = sport;
+        this.size = size;
+        this.qty = quantity;
+        this.price = price;
+    }
+
     public void setName(String name) { this.name = name;}
 
     public String getName() { return this.name; }
@@ -33,4 +43,6 @@ public class Sneaker {
     public float getPrice() { return this.price; }
 
     public void setPrice(float price) { this.price = price; }
+
+    public float getId() { return this.id; }
 }

@@ -4,7 +4,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class SneakerTest {
-    Sneaker testSneaker = new Sneaker();
+
+    int expectedId = 6;
+    String expectedName = "Stan Smith";
+    String expectedBrand = "Adidas";
+    String expectedSport = "Tennnis";
+    float expectedSize = 10.5f;
+    int expectedQty = 10;
+    float expectedPrice = 80.00f;
+
+    Sneaker testSneaker = new Sneaker(expectedId,expectedName,expectedBrand,expectedSport,expectedSize,expectedQty,expectedId);
 
     @Test
     public void testSetGetName() {
@@ -26,7 +35,7 @@ public class SneakerTest {
 
     @Test
     public void testSetGetSize(){
-        float expected = 23L;
+        float expected = 23f;
 
         testSneaker.setSize(expected);
         Assertions.assertEquals(expected,testSneaker.getSize());
@@ -42,7 +51,7 @@ public class SneakerTest {
 
     @Test
     public void testSetGetPrice(){
-        float expected = 120L;
+        float expected = 120.00f;
 
         testSneaker.setPrice(expected);
         Assertions.assertEquals(expected,testSneaker.getPrice());
@@ -54,5 +63,24 @@ public class SneakerTest {
 
         testSneaker.setSport(expected);
         Assertions.assertEquals(expected,testSneaker.getSport());
+    }
+
+    @Test // (1)
+    public void constructorTest(){
+
+        // (2)
+
+
+        // (3)
+        Sneaker testSneaker = new Sneaker(expectedId, expectedName, expectedBrand,
+                expectedSport, expectedSize, expectedQty,expectedPrice);
+
+        // (4)
+        Assertions.assertEquals(expectedId, testSneaker.getId());
+        Assertions.assertEquals(expectedName, testSneaker.getName());
+        Assertions.assertEquals(expectedBrand, testSneaker.getBrand());
+        Assertions.assertEquals(expectedSport, testSneaker.getSport());
+        Assertions.assertEquals(expectedQty, testSneaker.getQty());
+        Assertions.assertEquals(expectedPrice, testSneaker.getPrice());
     }
 }
