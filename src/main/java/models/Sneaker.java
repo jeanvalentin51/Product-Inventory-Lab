@@ -44,5 +44,5 @@ public class Sneaker {
 
     public void setPrice(float price) { this.price = price; }
 
-    public float getId() { return this.id; }
+    public int getId() { return this.id; }
 }

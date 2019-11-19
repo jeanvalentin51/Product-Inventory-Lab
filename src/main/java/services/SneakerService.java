@@ -10,7 +10,7 @@ public class SneakerService {
     private ArrayList<Sneaker> inventory = new ArrayList<>();
 
 
-    public Sneaker create(String name, String brand, String sport, int size, int quantity, float price) {
+    public Sneaker create(String name, String brand, String sport, float size, int quantity, float price) {
 
         // (2)
         Sneaker createdSneaker = new Sneaker(nextId++, name, brand, sport, size, quantity, price);
