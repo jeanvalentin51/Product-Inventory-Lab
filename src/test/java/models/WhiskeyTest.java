@@ -9,7 +9,8 @@ public class WhiskeyTest {
     private String expectedBrand = "Johnny";
     private int expectedId = 1;
     private int expectedQty = 2;
-    Whiskey testWhiskey = new Whiskey(expectedBrand,expectedId,expectedQty);
+    private float expectedPrice = 50f;
+    Whiskey testWhiskey = new Whiskey(expectedBrand,expectedId,expectedQty,expectedPrice);
 
     @Test
     public void testSetGetBrand() {
@@ -38,8 +39,8 @@ public class WhiskeyTest {
 
     @Test
     public void testConstructor(){
-        Whiskey newTest = new Whiskey(expectedBrand,expectedId,expectedQty);
-
+        Whiskey newTest = new Whiskey(expectedBrand,expectedId,expectedQty,expectedPrice);
+        Assertions.assertEquals(expectedPrice,testWhiskey.getPrice());
         Assertions.assertEquals(expectedBrand,testWhiskey.getBrand());
         Assertions.assertEquals(expectedId,testWhiskey.getId());
         Assertions.assertEquals(expectedQty,testWhiskey.getQty());

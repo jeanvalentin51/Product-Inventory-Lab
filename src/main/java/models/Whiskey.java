@@ -5,11 +5,15 @@ public class Whiskey {
     private String brand;
     private int id;
     private int qty;
+    private float price;
 
-    public Whiskey(String brand, int id, int quantity){
+
+
+    public Whiskey(String brand, int id, int quantity, float price){
         this.brand = brand;
         this.id = id;
         this.qty = quantity;
+        this.price = price;
     }
 
     public String getBrand() { return this.brand; }
@@ -23,4 +27,11 @@ public class Whiskey {
     public int getId() { return this.id; }
 
     public void setId(int id) { this.id = id; }
+    public float getPrice() {
+        return this.price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 }
